@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body {
+		background: skyblue; 
+		font-family: verdana;
+		color: #fff;
+		padding: 30px;
+	}
+	h1 {
+		font-size: 48px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+	p {
+		font-size: 16px;
+		text-align: center;
+	}
+	form {
+		text-align: center;
+	}
+	input {
+		box-sizing: 30px;
+	}
+	</style>
+	<title></title>
+</head>
+<body>
+	<% include partial/nav.ejs %>
+	<h1>Contact Us!!!</h1>
+	
+
+	<form id="contact-form" method="POST" action="/contact">
+		<label for="who">Who do you want to contact?</label><br><br>
+		
+		<input type="text" name="who" value="<%= qs.person %>"></input><br><br><hr></hr>
+		
+		<label for="department">Which department?</label><br><br>
+		
+		<input type="text" name="department" value="<%= qs.dept %>"></input><br><br><hr></hr>
+
+		<label for="email">Your email</label><br><br>
+		
+		<input type="text" name="email" value="<%= qs.email %>"</input><br><br>
+		
+		<input type="submit" name="submit"></input><br><br>
+	</form>
+
+
+</body>
+</html>
